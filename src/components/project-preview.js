@@ -50,7 +50,7 @@ const ProjectPreview = ({ slug, title, imageData, description }) => {
   const classes = useStyles()
 
   return (
-    <div className="portfolio">
+    <div className="portfolio" id="portfolio">
       <Container maxWidth="lg" className={classes.portfolio}>
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={4}>

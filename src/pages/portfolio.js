@@ -9,7 +9,7 @@ import { makeStyles } from "@material-ui/core/styles"
 const useStyles = makeStyles(theme => ({
   portfolioTitle: {
     fontWeight: 800,
-    fontSize: "3rem",
+    fontSize: "2rem",
     paddingTop: theme.spacing(3),
     textTransform: "uppercase",
   },
@@ -42,7 +42,7 @@ const Portfolio = () => {
   const projects = data.allProjectsJson.edges
 
   return (
-    <div className="portfolio" id="portfolio">
+    <section className="blogs-page" id="portfolio">
       <SEO title="Portfolio" />
       <Typography variant="h1" className={classes.portfolioTitle}>
         Porfolio
@@ -62,7 +62,7 @@ const Portfolio = () => {
           />
         )
       })}
-    </div>
+    </section>
   )
 }
 

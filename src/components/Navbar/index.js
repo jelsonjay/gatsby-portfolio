@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react"
 import { FaBars, FaTimes } from "react-icons/fa"
 import { IconContext } from "react-icons/lib"
+import {animateScroll as scrolly} from 'react-scroll'
+
 import {
   Nav,
   MobileIcon,
   NavLogo,
-  NavIcon,
   NavbarContainer,
   NavMenu,
   NavItem,
@@ -30,13 +31,17 @@ const Navbar = () => {
     window.addEventListener("scroll", changeNav)
   }, [])
 
+  const toggleHome = () =>{
+    scrolly.scrollToTop();
+  }
+
+
   return (
     <>
       <IconContext.Provider value={{ color: "#fff" }}>
         <Nav active={scroll} click={click}>
           <NavbarContainer>
-            <NavLogo to="/">
-              <NavIcon />
+            <NavLogo to="/" onClick={toggleHome}>
               JJ
             </NavLogo>
             <MobileIcon onClick={handleClick}>
@@ -49,7 +54,7 @@ const Navbar = () => {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink smooth to="#about">
+                <NavLink to="#about" smooth={true} duration={500} spy={true} exact='true' offset={-80} activeClass='active'>
                   About
                 </NavLink>
               </NavItem>

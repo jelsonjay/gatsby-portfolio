@@ -2,7 +2,6 @@ import React from "react"
 import { FaFacebook, FaLinkedin, FaGithub, FaCodepen } from "react-icons/fa"
 import {
   FooterContainer,
-  SocialIcon,
   SocialIconLink,
   SocialIcons,
   SocialLogo,
@@ -16,11 +15,9 @@ function index() {
       <SocialMedia>
         <SocialMediaWrap>
           <SocialLogo>
-            <SocialIcon />
             JJ
           </SocialLogo>
           <WebsiteRights>
-            {" "}
             &copy; {new Date().getFullYear()} Jelson J
           </WebsiteRights>
           <SocialIcons>

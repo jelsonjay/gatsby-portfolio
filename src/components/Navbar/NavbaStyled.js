@@ -3,10 +3,7 @@ import styled from "styled-components"
 import { DiScala } from "react-icons/di"
 
 export const Nav = styled.nav`
-  background: ${({ active }) =>
-    active
-      ? "#041230"
-      : "linear-gradient(to bottom, rgba(255,255,255 0.9) 0% rgba(255,255,255,0)100%)"};
+  background: ${({ active }) =>active ? "#041230":"transparent"};
   height: 80px;
   display: flex;
   justify-content: center;
@@ -71,17 +68,24 @@ export const NavMenu = styled.ul`
     top: ${({ click }) => (click ? "100%" : "-1000px")};
     opacity: 1;
     transition: all 0.2s ease;
-    background: "#fff";
+    background: #041230;
   }
 `
 export const NavLink = styled(Link)`
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   height: 100%;
   color: #fff;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  &:hover {
+    color: orange;
+    transition: all 0.3s ease;
+  &:active{
+    border-bottom: 3px solid #fff;
+  }
+  }
 
   @media screen and (max-width: 960px) {
     text-align: center;

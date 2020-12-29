@@ -20,7 +20,7 @@ function Hero() {
         />
       </Typography>
       <Button fontXl big>
-        Red More
+      Get in touch
       </Button>
     </Box>
   )

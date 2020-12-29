@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --mainBlue: #041230;
+  --mainOrange: #e3872d;
+  --main-yellow: #cbb470f2;
+  --mainTransition: all 0.25s ease-in-out;
+  --lightShadow: 3px 8px 3px 1px rgba(0, 0, 0, 0.5);
+  --darkShadow: 5px 10px 8px 2px rgba(0, 0, 0, 0.5);
+}
+/*---------start grid---------*/
+.grid {
+  width: 600px;
+  padding: 10px;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 3fr));
+}
+@media screen and (min-width: 768px) {
+  .product {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .grid {
+    flex: calc(50% - 20px);
+    margin: 10px;
+  }
+}
+
+.group-image {
+  height: 250px;
+  width: 100%;
+  vertical-align: middle;
+}
+/*---------end grid---------*/
+
+/*--------Filter-------- */
+.btns {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+.btns button {
+  padding: 7px 10px;
+  margin: 10px 5px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btns button:hover {
+  background: var(--mainOrange);
+  color: #fff;
+}
+/*--------end button-------*/
+
+/*--media qury---*/
+@media screen and (min-width: 664px) {
+  .product {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .grid {
+    flex: calc(33.3333% - 20px);
+    margin: 10px;
+  }
+}
+
+@media (max-width: 80rem) {
+  .grid {
+    flex: calc(50% - 20px);
+    margin: 10px;
+  }
+}
+@media (max-width: 56rem) {
+  .grid {
+    flex: calc(100% - 20px);
+    margin: 10px;
+    width: 100%;
+  }
+}
+
+/*-------- start card design------- */
+.card-body h1 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: coral;
+}
+.card-body p {
+  font-size: 1rem;
+  padding: 10px;
+  text-align: left;
+}
+
+/*------ end card design----- */
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 50%;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: skyblue;
+}
+
+.btn:hover {
+  background-color: grey;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+/*---star experience */
+.experience {
+  width: 90vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 40px;
+  padding: 40px;
+}
+@media screen and (min-width: 776px) {
+  .experience {
+    width: 90vw;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  }
+}
+@media screen and (min-width: 992px) {
+  .experience {
+    width: 95vw;
+    max-width: 1170px;
+  }
+}
+
+.btnTest {
+  background: #041230;
+  color: #fff;
+}
+.btnJs {
+  background: #f0db4f;
+  color: #fff;
+}
+.btnreact {
+  background: #61dbfb;
+  color: #fff;
+}
+
+.btnvue {
+  background: #41b883;
+  color: #fff;
+}
+
+.btngatsby {
+  background: #663399;
+  color: #fff;
+}
+.btnnode {
+  background: #3c873a;
+  color: #fff;
+}
